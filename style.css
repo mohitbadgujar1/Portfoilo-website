@@ -1,0 +1,95 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  .nav-link {
+    position: relative;
+    font-weight: 500;
+  }
+  
+  .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #3b82f6;
+    width: 0;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  .skill-ring svg {
+    display: block;
+    margin: auto;
+  }
+  
+  .tooltip {
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    width: 180px;
+    text-align: center;
+  }
+  
+  #darkToggle {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #darkToggle:hover {
+    transform: scale(1.1);
+  }
+/* General styling for skills section */
+.skill-ring {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-ring:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  /* Tooltip styling */
+  .tooltip {
+    display: none;
+    position: absolute;
+    top: -35px; /* Move tooltip up by 35px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    white-space: nowrap;
+  }
+  
+  .skill-ring:hover .tooltip {
+    display: block;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Arrow appears at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+  }
+  
+  /* Optional: Change tooltip appearance on hover (for a more vibrant feel) */
+  .skill-ring:hover .tooltip {
+    background-color: #333;
+  }
+  
+  
+  
